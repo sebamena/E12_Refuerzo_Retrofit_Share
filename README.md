@@ -7,16 +7,16 @@ Este proyecto contiene la base para desarrollar una APP como [Unsplashy](https:/
   # Instrucciones
 Al final de la clase deberás funcionando esta aplicació, esto es un ejercicio de Retrofit, lo que falta por implementar es el request http a Unsplash. **Si no te haz creado una cuenta en Unsplash como developer tienes que hacerlo ahora.**
 
-###El request http que tienes que hacer es obtener 10 fotos al azar
+### El request http que tienes que hacer es obtener 10 fotos al azar
 
-##Preparar el proyecto
+## Preparar el proyecto
 1.  Antes de escribir 1 línea de código abre Postman y haz el request http ahí primero, cuando te funcione continua.
 2.  Debes hacer `git clone` al repositorio y abrirlo en Android Studio.
 3.  Debes crear los  modelos que correspondan, en el proyecto encontrarás las clases ya creadas pero vacias. Como estos modelos son un poco extensos te recomendamos que utilices [Json_editor_online](http://www.jsoneditoronline.org/). El truco es copiar y pegar el JSON para aprovecharse de la interfaz gráfica del editor en línea, como referencia:
 
 ![Demo picture](https://firebasestorage.googleapis.com/v0/b/bilearning-3a15b.appspot.com/o/e12_refuerzo_retrofit%2FGif%20Json%20online%20editor.gif?alt=media&token=f29dcf7c-db29-417a-b2cb-7eac90e1c359)
 
-##Retrofit
+## Retrofit
 A traves de retrofit hace el request que corresponda utilizando una AsyncTask.
 
 1.  En el proyecto encontrarás la interface, el interceptor y la AsyncTask creadas, pero vacias.
@@ -26,7 +26,7 @@ A traves de retrofit hace el request que corresponda utilizando una AsyncTask.
 5.  Para echar a andar la AsyncTask para que se ejecute cuando se abre la aplicación tendrás que crear una clase interna (*Pista:* Después tendrás que conectarla con el adapter)
 6.  Echa a correr la AsyncTask
 
-##Conectarla con el adapter
+## Conectarla con el adapter
 Si te fijas el adapter tiene código comentado porque faltaba el modelo, y tiene un método para actuallizarlo.
 
 1.  Descomenta el código en el adapter
