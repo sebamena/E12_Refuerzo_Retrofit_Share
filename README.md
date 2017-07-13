@@ -32,7 +32,7 @@ Si te fijas el adapter tiene código comentado porque faltaba el modelo, y tiene
 1.  Descomenta el código en el adapter
 2.  Tendrás que pasarle la data al adapter (*Pista:* Hazlo en onPostExecute)
 
-
+#### Protip
 El TextView que muestra el nombre del usuario se le cambio la opacidad al fondo, para simular una apariencia transparente.
 ejemplo:
 
