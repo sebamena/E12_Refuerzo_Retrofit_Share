@@ -15,7 +15,7 @@
 
 4.  A traves de retrofit hace el request que corresponda utilizando una AsyncTask.
 5.  Con la data del request, completa tu UnsplahsyAdapter.
-6.  Para el TextView que muestra el nombre del usuario, utiliza la siguiente ayuda, para cambiar la opacidad del fondo
+6.  Al TextView que muestra el nombre del usuario se le cambio la opacidad, para simular una apariencia transparente.
 ejemplo:
 
 ![Demo picture](https://firebasestorage.googleapis.com/v0/b/bilearning-3a15b.appspot.com/o/e12_refuerzo_retrofit%2FGif%20Opacity.gif?alt=media&token=b5849752-cd77-4bdb-a7d4-326f52d3a9c2)
