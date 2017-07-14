@@ -5,7 +5,7 @@ Este proyecto contiene la base para desarrollar una APP como [Unsplashy](https:/
    la cual realiza un request a unsplash.com y muestra 10 imagenes aleatorias cada vez que se abre la aplicación.
 
   # Instrucciones
-Al final de la clase deberás funcionando esta aplicació, esto es un ejercicio de Retrofit, lo que falta por implementar es el request http a Unsplash. **Si no te haz creado una cuenta en Unsplash como developer tienes que hacerlo ahora.**
+Al final de la clase deberás tener funcionando esta aplicación, esto es un ejercicio de Retrofit, lo que falta por implementar es el request http a Unsplash. **Si no te haz creado una cuenta en Unsplash como developer tienes que hacerlo ahora.**
 
 ### El request http que tienes que hacer es obtener 10 fotos al azar
 
