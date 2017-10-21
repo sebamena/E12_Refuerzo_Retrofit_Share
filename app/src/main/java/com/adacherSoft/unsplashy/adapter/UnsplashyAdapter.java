@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.adacherSoft.unsplashy.R;
 import com.adacherSoft.unsplashy.models.Unsplash;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,8 +36,8 @@ public class UnsplashyAdapter extends RecyclerView.Adapter<UnsplashyAdapter.View
         Unsplash unsplash = unsplashList.get(position);
         ImageView photo = holder.unsplashPhoto;
 
-       // Picasso.with(photo.getContext()).load(GET THE SMALL URL FROM THE MODEL).centerCrop().fit().into(photo);
-       // holder.userTv.setText(GET THE USERNAME FROM THE MODEL);
+        Picasso.with(photo.getContext()).load(unsplash.getUrls().getSmall()).centerCrop().fit().into(photo);
+        holder.userTv.setText(unsplash.getUser().getName());
 
     }
 
