@@ -1,6 +1,7 @@
 package com.adacherSoft.unsplashy.views;
 
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -12,6 +13,10 @@ import android.view.ViewGroup;
 
 import com.adacherSoft.unsplashy.R;
 import com.adacherSoft.unsplashy.adapter.UnsplashyAdapter;
+import com.adacherSoft.unsplashy.background.GetDataSplash;
+import com.adacherSoft.unsplashy.models.Unsplash;
+
+import java.util.List;
 
 
 /**
@@ -44,5 +49,26 @@ public class UnsplashFragment extends Fragment  {
 
         adapter = new UnsplashyAdapter();
         recyclerView.setAdapter(adapter);
+
+        new GetPhotos().execute();
+    }
+
+
+    private class GetPhotos extends GetDataSplash {
+
+        private ProgressDialog progressDialog;
+
+        @Override
+        protected void onPreExecute() {
+            progressDialog = new ProgressDialog(getActivity());
+            progressDialog.setCancelable(false);
+            progressDialog.show();
+        }
+
+        @Override
+        protected void onPostExecute(List<Unsplash> unsplashes) {
+            adapter.update(unsplashes);
+            progressDialog.dismiss();
+        }
     }
 }

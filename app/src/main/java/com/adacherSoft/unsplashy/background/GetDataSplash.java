@@ -22,10 +22,10 @@ import retrofit2.Response;
 public class GetDataSplash extends AsyncTask<Void, Void, List<Unsplash>> {
 
     @Override
-    protected List<Unsplash> doInBackground(Void... params) {
+    public List<Unsplash> doInBackground(Void... params) {
 
         GetSplash request = new UnsplashInterceptor().get();
-        Call<List<Unsplash>> call = request.getRandom(10);
+        Call<List<Unsplash>> call = request.get(10);
 
         List<Unsplash> list = new ArrayList<>();
 
@@ -39,6 +39,14 @@ public class GetDataSplash extends AsyncTask<Void, Void, List<Unsplash>> {
                 if (response.body().size()>0){
 
                     list = response.body();
+
+                    if (list.size() > 0) {
+
+                        for (Unsplash unsplash : list) {
+                            Log.d("Image", unsplash.getUrls().getFull());
+                        }
+
+                    }
 
                 }
             }

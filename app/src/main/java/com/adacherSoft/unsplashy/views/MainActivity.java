@@ -3,6 +3,7 @@ package com.adacherSoft.unsplashy.views;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 
 import com.adacherSoft.unsplashy.R;
 import com.adacherSoft.unsplashy.adapter.UnsplashyAdapter;
@@ -21,15 +22,17 @@ public class MainActivity extends AppCompatActivity{
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        adapter = new UnsplashyAdapter();
-        new Async().execute();
+        //adapter = new UnsplashyAdapter();
+        //new Async().execute();
     }
 
     private class Async extends GetDataSplash {
 
         @Override
         protected void onPostExecute(List<Unsplash> unsplashes) {
-            adapter.update(unsplashes);
+            super.onPostExecute(unsplashes);
+
+            Log.d("Test", String.valueOf(unsplashes));
         }
 
 

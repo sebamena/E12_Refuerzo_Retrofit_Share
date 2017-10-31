@@ -14,8 +14,8 @@ import retrofit2.http.Query;
 
 public interface GetSplash {
 
-    @GET("photos/random")
-    Call<List<Unsplash>> getRandom(@Query("count") int count);
+    @GET("random")
+    Call<List<Unsplash>> get(@Query("count") int count);
 
 
 
